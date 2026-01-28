@@ -1,69 +1,79 @@
-* {
+﻿* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
 body {
     font-family: Helvetica, Arial, sans-serif;
     background-color: #f0f2f5;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0;
 }
 
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px;
-    max-width: 1200px;
+    gap: 60px;
     width: 100%;
+    max-width: 1200px;
     padding: 20px;
 }
 
 .left-section {
     flex: 1;
-    max-width: 400px;
+    width: 280px;
 }
 
 .facebook-logo {
-    font-size: 52px;
+    font-size: 60px;
     color: #1877f2;
-    font-weight: 800;
-    margin-bottom: 15px;
+    font-weight: 700;
+    margin-bottom: 12px;
     font-family: Helvetica, Arial, sans-serif;
+    letter-spacing: -1px;
 }
 
 .tagline {
     font-size: 15px;
-    color: #595959;
-    line-height: 1.4;
+    color: #0a0a0a;
+    line-height: 1.5;
+    font-weight: 500;
 }
 
 .right-section {
-    background-color: white;
-    padding: 20px;
+    background-color: #ffffff;
+    padding: 24px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 396px;
+    text-align: center;
 }
 
 .login-form {
     display: flex;
     flex-direction: column;
     gap: 12px;
+    margin-bottom: 16px;
 }
 
 .input-field {
-    padding: 11px 16px;
+    padding: 12px 14px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 6px;
     font-size: 13px;
     background-color: #f0f2f5;
     color: #050505;
+    font-family: Helvetica, Arial, sans-serif;
 }
 
 .input-field:focus {
@@ -73,19 +83,21 @@ body {
 }
 
 .input-field::placeholder {
-    color: #999;
+    color: #a9a9a9;
 }
 
 .login-btn {
-    padding: 12px 16px;
+    padding: 11px 16px;
     background-color: #1877f2;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     font-size: 15px;
     font-weight: 600;
     cursor: pointer;
-    margin-top: 8px;
+    margin-top: 4px;
+    font-family: Helvetica, Arial, sans-serif;
+    transition: background-color 0.2s;
 }
 
 .login-btn:hover {
@@ -97,11 +109,12 @@ body {
 }
 
 .forgot-password {
-    text-align: center;
+    display: block;
     color: #1877f2;
     text-decoration: none;
     font-size: 13px;
     margin-top: 8px;
+    font-family: Helvetica, Arial, sans-serif;
 }
 
 .forgot-password:hover {
@@ -111,19 +124,22 @@ body {
 .divider {
     border: none;
     border-top: 1px solid #e5e5e5;
-    margin: 12px 0;
+    margin: 12px 0 !important;
+    height: 0;
 }
 
 .create-account-btn {
-    padding: 12px 16px;
+    padding: 11px 16px;
     background-color: #31a24c;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     font-size: 15px;
     font-weight: 600;
     cursor: pointer;
-    margin-top: 8px;
+    margin-top: 4px;
+    font-family: Helvetica, Arial, sans-serif;
+    transition: background-color 0.2s;
 }
 
 .create-account-btn:hover {
@@ -135,10 +151,11 @@ body {
 }
 
 .footer-text {
-    text-align: center;
     font-size: 12px;
-    color: #999;
-    margin-top: 16px;
+    color: #65676b;
+    margin-top: 8px;
+    line-height: 1.4;
+    font-family: Helvetica, Arial, sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -148,10 +165,11 @@ body {
     }
     
     .left-section {
-        text-align: center;
+        width: 100%;
+        max-width: 396px;
     }
     
     .right-section {
-        max-width: 100%;
+        width: 100%;
     }
 }
