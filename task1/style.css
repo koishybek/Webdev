@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: #f0f2f5;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+}
+
+.left-section {
+    flex: 1;
+    max-width: 400px;
+}
+
+.facebook-logo {
+    font-size: 52px;
+    color: #1877f2;
+    font-weight: 800;
+    margin-bottom: 15px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.tagline {
+    font-size: 15px;
+    color: #595959;
+    line-height: 1.4;
+}
+
+.right-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 396px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.input-field {
+    padding: 11px 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 13px;
+    background-color: #f0f2f5;
+    color: #050505;
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: #1877f2;
+    background-color: #f9f9f9;
+}
+
+.input-field::placeholder {
+    color: #999;
+}
+
+.login-btn {
+    padding: 12px 16px;
+    background-color: #1877f2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.login-btn:hover {
+    background-color: #165ec9;
+}
+
+.login-btn:active {
+    background-color: #0a5fc9;
+}
+
+.forgot-password {
+    text-align: center;
+    color: #1877f2;
+    text-decoration: none;
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid #e5e5e5;
+    margin: 12px 0;
+}
+
+.create-account-btn {
+    padding: 12px 16px;
+    background-color: #31a24c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.create-account-btn:hover {
+    background-color: #2a8a3f;
+}
+
+.create-account-btn:active {
+    background-color: #218038;
+}
+
+.footer-text {
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+    margin-top: 16px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .left-section {
+        text-align: center;
+    }
+    
+    .right-section {
+        max-width: 100%;
+    }
+}
