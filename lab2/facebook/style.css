@@ -1,0 +1,247 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #1c1e21;
+    line-height: 1.34;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 720px;
+    padding-bottom: 112px;
+    padding-top: 72px;
+}
+
+.content-wrapper {
+    display: flex;
+    width: 980px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.left-col {
+    width: 500px;
+    margin-right: 32px;
+    padding-top: 112px;
+}
+
+.branding .logo {
+    height: 106px;
+    margin: -28px;
+}
+
+.branding h2 {
+    font-size: 28px;
+    font-weight: normal;
+    line-height: 32px;
+    width: 500px;
+    margin-top: 10px;
+}
+
+.right-col {
+    width: 396px;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 10px 15px 24px;
+    text-align: center;
+}
+
+.login-card input {
+    width: 100%;
+    padding: 14px 16px;
+    margin: 6px 0;
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+    font-size: 17px;
+    line-height: 16px;
+}
+
+.login-card input:focus {
+    outline: none;
+    border-color: #1877f2;
+    box-shadow: 0 0 0 2px #e7f3ff;
+}
+
+.login-btn {
+    width: 100%;
+    background-color: #1877f2;
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    line-height: 48px;
+    padding: 0 16px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 6px;
+    transition: background-color 0.2s;
+}
+
+.login-btn:hover {
+    background-color: #166fe5;
+}
+
+.forgot-password {
+    display: block;
+    color: #1877f2;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 16px;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.login-card .divider {
+    border-bottom: 1px solid #dadde1;
+    margin: 20px 0;
+}
+
+.create-account-btn {
+    background-color: #42b72a;
+    border: none;
+    border-radius: 6px;
+    font-size: 17px;
+    line-height: 48px;
+    padding: 0 16px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin: 6px auto;
+    display: inline-block;
+}
+
+.create-account-btn:hover {
+    background-color: #36a420;
+}
+
+.create-page-text {
+    margin-top: 28px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.create-page-text a {
+    text-decoration: none;
+    color: #1c1e21;
+    font-weight: bold;
+}
+
+.create-page-text a:hover {
+    text-decoration: underline;
+}
+
+
+footer {
+    background: #fff;
+    padding-top: 20px;
+    color: #737373;
+    font-size: 12px;
+}
+
+.footer-wrapper {
+    width: 980px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.languages {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.languages span {
+    color: #737373;
+}
+
+.languages a,
+.links a {
+    color: #8a8d91;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.languages a:hover,
+.links a:hover {
+    text-decoration: underline;
+}
+
+.plus-btn {
+    background-color: #f5f6f7;
+    border: 1px solid #ccd0d5;
+    color: #606770;
+    font-weight: bold;
+    padding: 0 8px;
+    cursor: pointer;
+}
+
+footer .divider {
+    border-bottom: 1px solid #dddfe2;
+    margin: 8px 0;
+}
+
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    line-height: 1.6;
+}
+
+.copyright {
+    margin-top: 20px;
+}
+
+
+@media (max-width: 980px) {
+    .content-wrapper {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 40px;
+    }
+
+    .left-col {
+        width: auto;
+        margin-right: 0;
+        text-align: center;
+        padding-top: 0;
+        margin-bottom: 40px;
+    }
+
+    .branding .logo {
+        height: 40px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .branding h2 {
+        width: auto;
+        font-size: 18px;
+        margin-top: 0;
+    }
+
+    .footer-wrapper {
+        width: 100%;
+        padding: 20px;
+    }
+}
