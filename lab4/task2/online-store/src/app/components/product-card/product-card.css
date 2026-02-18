@@ -1,0 +1,144 @@
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.2s;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+}
+
+.gallery {
+  padding: 16px;
+  background: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-image {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.main-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.thumbnails {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.thumbnails img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 2px;
+  background: white;
+}
+
+.thumbnails img.active {
+  border-color: #0088cc;
+  box-shadow: 0 0 0 2px rgba(0,136,204,0.2);
+}
+
+.details {
+  padding: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+h3 a {
+  text-decoration: none;
+  color: #333;
+}
+
+h3 a:hover {
+  color: #0088cc;
+}
+
+.description {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+  flex: 1;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.stars {
+  color: #e0e0e0;
+  font-size: 1.2rem;
+}
+
+.stars .filled {
+  color: #ffc107;
+}
+
+.price {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.share-btn {
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  color: white;
+  transition: opacity 0.2s;
+  width: 100%;
+  text-align: center;
+}
+
+.share-btn:hover {
+  opacity: 0.9;
+}
+
+.share-btn.whatsapp {
+  background-color: #25D366;
+}
+
+.share-btn.telegram {
+  background-color: #0088cc;
+}

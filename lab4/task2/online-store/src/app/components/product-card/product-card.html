@@ -1,0 +1,31 @@
+<div class="card">
+  <div class="gallery">
+    <div class="main-image">
+      <img [src]="currentImage" [alt]="product.name">
+    </div>
+    <div class="thumbnails">
+      <img *ngFor="let img of product.images" [src]="img" (click)="updateImage(img)" [class.active]="currentImage === img">
+    </div>
+  </div>
+  
+  <div class="details">
+    <h3><a [href]="product.link" target="_blank">{{ product.name }}</a></h3>
+    <p class="description">{{ product.description }}</p>
+    
+    <div class="rating">
+      Rating: <span>{{ product.rating }} / 5.0</span>
+      <span class="stars">
+        <span *ngFor="let i of [1,2,3,4,5]" [class.filled]="i <= product.rating">★</span>
+      </span>
+    </div>
+
+    <div class="price">
+      {{ product.price | currency:'KZT':'symbol-narrow':'1.0-0' }}
+    </div>
+
+    <div class="actions">
+      <button (click)="share('whatsapp')" class="share-btn whatsapp">Share on WhatsApp</button>
+      <button (click)="share('telegram')" class="share-btn telegram">Share on Telegram</button>
+    </div>
+  </div>
+</div>
