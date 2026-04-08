@@ -1,0 +1,49 @@
+<header class="main-header">
+  <div class="header-content">
+    <div class="logo">
+      <div class="logo-icon">⚡</div>
+      <h1>TechStore</h1>
+    </div>
+
+    <nav class="category-nav">
+      @for (category of categories(); track category.id) {
+      <button
+        class="category-btn"
+        [class.active]="selectedCategory()?.id === category.id"
+        (click)="selectCategory(category)"
+        [id]="'cat-btn-' + category.id">
+        <span class="category-icon">{{ getCategoryIcon(category.name) }}</span>
+        {{ category.name }}
+      </button>
+      }
+    </nav>
+  </div>
+</header>
+
+<main class="main-content">
+  @if (selectedCategory(); as cat) {
+  <div class="category-banner">
+    <div class="banner-icon">{{ getCategoryIcon(cat.name) }}</div>
+    <div class="banner-text">
+      <h2>{{ cat.name }}</h2>
+      <p>{{ displayedProducts().length }} products available</p>
+    </div>
+  </div>
+
+  <app-product-list [products]="displayedProducts()"></app-product-list>
+  } @else {
+  <div class="welcome-screen">
+    <div class="welcome-logo">⚡</div>
+    <h2>Welcome to TechStore</h2>
+    <p>Discover top-rated electronics at the best prices. Browse our curated categories to find your perfect device.</p>
+
+    <div class="category-chips">
+      @for (category of categories(); track category.id) {
+      <button class="category-chip" (click)="selectCategory(category)">
+        {{ getCategoryIcon(category.name) }} {{ category.name }}
+      </button>
+      }
+    </div>
+  </div>
+  }
+</main>

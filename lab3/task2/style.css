@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-    background-color: #fff;
+    background-color: #ff0000;
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -19,7 +19,7 @@ body {
 
 header h1 {
     text-align: center;
-    color: #333;
+    color: #333333;
     margin-bottom: 1.5rem;
 }
 

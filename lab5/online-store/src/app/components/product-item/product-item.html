@@ -1,0 +1,51 @@
+<div class="product-card">
+  <div class="badge-price">{{ product().price | currency:'KZT':'symbol-narrow':'1.0-0' }}</div>
+  
+  <div class="image-wrapper">
+    <img [src]="product().image" [alt]="product().name" loading="lazy">
+    <div class="image-overlay">
+      <button class="btn-quick-view" (click)="share('whatsapp')">View on Kaspi</button>
+    </div>
+  </div>
+
+  <div class="card-body">
+    <div class="category-tag">ID: #{{product().id}}</div>
+    <h3 class="product-title">
+      <a [href]="product().link" target="_blank">{{ product().name }}</a>
+    </h3>
+    
+    <p class="product-desc">{{ product().description }}</p>
+
+    <div class="rating-bar">
+      <div class="stars">
+        @for (star of [1,2,3,4,5]; track star) {
+          <span class="star" [class.active]="star <= product().rating">✦</span>
+        }
+      </div>
+      <span class="rating-value">{{ product().rating }}</span>
+    </div>
+
+    <div class="card-actions">
+      <button 
+        class="action-btn like-btn" 
+        [class.is-liked]="isLiked()"
+        (click)="like()">
+        <span class="btn-icon">❤️</span>
+        <span class="btn-text">{{ likesCount() }}</span>
+      </button>
+
+      <div class="share-group">
+        <button class="share-icon wa" (click)="share('whatsapp')" title="Share on WhatsApp">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WA">
+        </button>
+        <button class="share-icon tg" (click)="share('telegram')" title="Share on Telegram">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="TG">
+        </button>
+      </div>
+
+      <button class="delete-btn" (click)="delete()" title="Delete product">
+        <span class="delete-icon">🗑️</span>
+      </button>
+    </div>
+  </div>
+</div>
